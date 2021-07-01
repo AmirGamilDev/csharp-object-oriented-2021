@@ -45,6 +45,29 @@ namespace ProductMaintenance
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            getAllProducts();
+        }
+
+        private void fillByProductCodeToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.productsTableAdapter.FillByProductCode(this.mMABooksDataSet.Products, productCodeToolStripTextBox.Text);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void getAllProductsToolStripButton_Click(object sender, EventArgs e)
+        {
+            getAllProducts();
+        }
+
+        private void getAllProducts()
+        {
             try
             {
                 this.productsTableAdapter.Fill(this.mMABooksDataSet.Products);

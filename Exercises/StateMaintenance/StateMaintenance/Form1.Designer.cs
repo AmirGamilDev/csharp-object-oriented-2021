@@ -1,4 +1,4 @@
-﻿namespace ProductMaintenance
+﻿namespace StateMaintenance
 {
     partial class Form1
     {
@@ -29,15 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label productCodeLabel;
-            System.Windows.Forms.Label descriptionLabel;
-            System.Windows.Forms.Label unitPriceLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.mMABooksDataSet = new ProductMaintenance.MMABooksDataSet();
-            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productsTableAdapter = new ProductMaintenance.MMABooksDataSetTableAdapters.ProductsTableAdapter();
-            this.tableAdapterManager = new ProductMaintenance.MMABooksDataSetTableAdapters.TableAdapterManager();
-            this.productsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.mMABooksDataSet = new StateMaintenance.MMABooksDataSet();
+            this.statesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.statesTableAdapter = new StateMaintenance.MMABooksDataSetTableAdapters.StatesTableAdapter();
+            this.tableAdapterManager = new StateMaintenance.MMABooksDataSetTableAdapters.TableAdapterManager();
+            this.statesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
@@ -49,73 +46,44 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.productsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.productCodeTextBox = new System.Windows.Forms.TextBox();
-            this.descriptionTextBox = new System.Windows.Forms.TextBox();
-            this.unitPriceTextBox = new System.Windows.Forms.TextBox();
-            productCodeLabel = new System.Windows.Forms.Label();
-            descriptionLabel = new System.Windows.Forms.Label();
-            unitPriceLabel = new System.Windows.Forms.Label();
+            this.statesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.statesDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.mMABooksDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingNavigator)).BeginInit();
-            this.productsBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statesBindingNavigator)).BeginInit();
+            this.statesBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.statesDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // productCodeLabel
-            // 
-            productCodeLabel.AutoSize = true;
-            productCodeLabel.Location = new System.Drawing.Point(17, 41);
-            productCodeLabel.Name = "productCodeLabel";
-            productCodeLabel.Size = new System.Drawing.Size(75, 13);
-            productCodeLabel.TabIndex = 1;
-            productCodeLabel.Text = "Product Code:";
-            // 
-            // descriptionLabel
-            // 
-            descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new System.Drawing.Point(17, 67);
-            descriptionLabel.Name = "descriptionLabel";
-            descriptionLabel.Size = new System.Drawing.Size(63, 13);
-            descriptionLabel.TabIndex = 3;
-            descriptionLabel.Text = "Description:";
-            // 
-            // unitPriceLabel
-            // 
-            unitPriceLabel.AutoSize = true;
-            unitPriceLabel.Location = new System.Drawing.Point(17, 93);
-            unitPriceLabel.Name = "unitPriceLabel";
-            unitPriceLabel.Size = new System.Drawing.Size(56, 13);
-            unitPriceLabel.TabIndex = 5;
-            unitPriceLabel.Text = "Unit Price:";
             // 
             // mMABooksDataSet
             // 
             this.mMABooksDataSet.DataSetName = "MMABooksDataSet";
             this.mMABooksDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // productsBindingSource
+            // statesBindingSource
             // 
-            this.productsBindingSource.DataMember = "Products";
-            this.productsBindingSource.DataSource = this.mMABooksDataSet;
+            this.statesBindingSource.DataMember = "States";
+            this.statesBindingSource.DataSource = this.mMABooksDataSet;
             // 
-            // productsTableAdapter
+            // statesTableAdapter
             // 
-            this.productsTableAdapter.ClearBeforeFill = true;
+            this.statesTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ProductsTableAdapter = this.productsTableAdapter;
-            this.tableAdapterManager.UpdateOrder = ProductMaintenance.MMABooksDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.StatesTableAdapter = this.statesTableAdapter;
+            this.tableAdapterManager.UpdateOrder = StateMaintenance.MMABooksDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // productsBindingNavigator
+            // statesBindingNavigator
             // 
-            this.productsBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.productsBindingNavigator.BindingSource = this.productsBindingSource;
-            this.productsBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.productsBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.productsBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statesBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.statesBindingNavigator.BindingSource = this.statesBindingSource;
+            this.statesBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.statesBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.statesBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -127,17 +95,17 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.productsBindingNavigatorSaveItem});
-            this.productsBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.productsBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.productsBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.productsBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.productsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.productsBindingNavigator.Name = "productsBindingNavigator";
-            this.productsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.productsBindingNavigator.Size = new System.Drawing.Size(390, 25);
-            this.productsBindingNavigator.TabIndex = 0;
-            this.productsBindingNavigator.Text = "bindingNavigator1";
+            this.statesBindingNavigatorSaveItem});
+            this.statesBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.statesBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.statesBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.statesBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.statesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.statesBindingNavigator.Name = "statesBindingNavigator";
+            this.statesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.statesBindingNavigator.Size = new System.Drawing.Size(309, 25);
+            this.statesBindingNavigator.TabIndex = 0;
+            this.statesBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -191,6 +159,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -224,61 +193,59 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // productsBindingNavigatorSaveItem
+            // statesBindingNavigatorSaveItem
             // 
-            this.productsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.productsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("productsBindingNavigatorSaveItem.Image")));
-            this.productsBindingNavigatorSaveItem.Name = "productsBindingNavigatorSaveItem";
-            this.productsBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.productsBindingNavigatorSaveItem.Text = "Save Data";
-            this.productsBindingNavigatorSaveItem.Click += new System.EventHandler(this.productsBindingNavigatorSaveItem_Click);
+            this.statesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.statesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("statesBindingNavigatorSaveItem.Image")));
+            this.statesBindingNavigatorSaveItem.Name = "statesBindingNavigatorSaveItem";
+            this.statesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.statesBindingNavigatorSaveItem.Text = "Save Data";
+            this.statesBindingNavigatorSaveItem.Click += new System.EventHandler(this.statesBindingNavigatorSaveItem_Click);
             // 
-            // productCodeTextBox
+            // statesDataGridView
             // 
-            this.productCodeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productsBindingSource, "ProductCode", true));
-            this.productCodeTextBox.Location = new System.Drawing.Point(98, 38);
-            this.productCodeTextBox.Name = "productCodeTextBox";
-            this.productCodeTextBox.Size = new System.Drawing.Size(100, 20);
-            this.productCodeTextBox.TabIndex = 2;
+            this.statesDataGridView.AutoGenerateColumns = false;
+            this.statesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.statesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            this.statesDataGridView.DataSource = this.statesBindingSource;
+            this.statesDataGridView.Location = new System.Drawing.Point(22, 37);
+            this.statesDataGridView.Name = "statesDataGridView";
+            this.statesDataGridView.Size = new System.Drawing.Size(262, 220);
+            this.statesDataGridView.TabIndex = 1;
+            this.statesDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.statesDataGridView_DataError);
             // 
-            // descriptionTextBox
+            // dataGridViewTextBoxColumn1
             // 
-            this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productsBindingSource, "Description", true));
-            this.descriptionTextBox.Location = new System.Drawing.Point(98, 64);
-            this.descriptionTextBox.Name = "descriptionTextBox";
-            this.descriptionTextBox.Size = new System.Drawing.Size(275, 20);
-            this.descriptionTextBox.TabIndex = 4;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "StateCode";
+            this.dataGridViewTextBoxColumn1.HeaderText = "State Code";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
-            // unitPriceTextBox
+            // dataGridViewTextBoxColumn2
             // 
-            this.unitPriceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productsBindingSource, "UnitPrice", true));
-            this.unitPriceTextBox.Location = new System.Drawing.Point(98, 90);
-            this.unitPriceTextBox.Name = "unitPriceTextBox";
-            this.unitPriceTextBox.Size = new System.Drawing.Size(100, 20);
-            this.unitPriceTextBox.TabIndex = 6;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "StateName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "State Name";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 127);
-            this.Controls.Add(productCodeLabel);
-            this.Controls.Add(this.productCodeTextBox);
-            this.Controls.Add(descriptionLabel);
-            this.Controls.Add(this.descriptionTextBox);
-            this.Controls.Add(unitPriceLabel);
-            this.Controls.Add(this.unitPriceTextBox);
-            this.Controls.Add(this.productsBindingNavigator);
+            this.ClientSize = new System.Drawing.Size(309, 280);
+            this.Controls.Add(this.statesDataGridView);
+            this.Controls.Add(this.statesBindingNavigator);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Product Maintenance";
+            this.Text = "State Maintenance";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mMABooksDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingNavigator)).EndInit();
-            this.productsBindingNavigator.ResumeLayout(false);
-            this.productsBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statesBindingNavigator)).EndInit();
+            this.statesBindingNavigator.ResumeLayout(false);
+            this.statesBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.statesDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,10 +254,10 @@
         #endregion
 
         private MMABooksDataSet mMABooksDataSet;
-        private System.Windows.Forms.BindingSource productsBindingSource;
-        private MMABooksDataSetTableAdapters.ProductsTableAdapter productsTableAdapter;
+        private System.Windows.Forms.BindingSource statesBindingSource;
+        private MMABooksDataSetTableAdapters.StatesTableAdapter statesTableAdapter;
         private MMABooksDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator productsBindingNavigator;
+        private System.Windows.Forms.BindingNavigator statesBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -302,10 +269,10 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton productsBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox productCodeTextBox;
-        private System.Windows.Forms.TextBox descriptionTextBox;
-        private System.Windows.Forms.TextBox unitPriceTextBox;
+        private System.Windows.Forms.ToolStripButton statesBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView statesDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }
 }
 
