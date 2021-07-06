@@ -59,7 +59,6 @@ namespace ClassBasicsDemo
             this.Code = code;
             this.Description = description;
             this.Price = price;
-
         }
 
         public string GetDisplayText(string sep)
