@@ -29,8 +29,11 @@ namespace ClassBasicsDemo
             MessageBox.Show(cs15DisplayText);
             MessageBox.Show(vb15DisplayText);
 
+            // this will use getter for Code property
             string cs15ProductCode = cs15.Code;
 
+            // this will use the setter for Code property
+            cs15.Code = "Some other code";
         }
     }
 }
