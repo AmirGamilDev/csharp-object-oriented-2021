@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace InheritanceAndAbstractClasses
 {
@@ -35,6 +36,25 @@ namespace InheritanceAndAbstractClasses
             Console.WriteLine($"Square info:\nColour: {redSquare.Colour}\nArea: {redSquare.Area}");
             Console.WriteLine($"\nRectangle info:\nColour: {greenRectangle.Colour}\nArea: {greenRectangle.Area}");
             Console.WriteLine($"\nCircle info:\nColour: {pinkCircle.Colour}\nArea: {pinkCircle.Area}");
+
+            Console.WriteLine("\n\n");
+
+            List<Shape> shapes = new List<Shape>();
+            shapes.Add(redSquare);
+            shapes.Add(greenRectangle);
+            shapes.Add(pinkCircle);
+            ListShapesInfo(shapes);
+        }
+
+        private static void ListShapesInfo(List<Shape> shapes)
+        {
+            foreach(Shape shape in shapes)
+            {
+                Console.WriteLine($"Shape type: {shape.GetType().Name}");
+                Console.WriteLine($"Colour: {shape.Colour}");
+                Console.WriteLine($"Area: {shape.Area}");
+                Console.WriteLine("\n");
+            }
         }
     }
 }
